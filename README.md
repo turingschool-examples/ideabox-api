@@ -49,7 +49,7 @@ Sample response (200):
 Sample response (404):
 
 ```js
-{error: 'No idea found with an id of 3'}
+{message: 'No idea found with an id of 3'}
 ```
 
 ### POST a new idea
@@ -94,7 +94,7 @@ Sample BAD request:
 Sample BAD response (422):
 
 ```js
-  { error: 'You are missing a required parameter of description' }
+  { message: 'You are missing a required parameter of description' }
 ```
 
 ### DELETE an idea
@@ -108,5 +108,5 @@ Sample response (204): no content
 Sample BAD response (404):
 
 ```js
-{error: 'No idea found with an id of 2'}
+{message: 'No idea found with an id of 2'}
 ```

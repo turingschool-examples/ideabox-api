@@ -22,7 +22,7 @@ app.get('/api/v1/ideas/:id', (request, response) => {
   const { id } = request.params;
   const match = app.locals.ideas.find(idea => idea.id == id);
 
-  if (!match) return response.status(404).json({error: `No idea found with an id of ${id}`});
+  if (!match) return response.status(404).json({message: `No idea found with an id of ${id}`});
 
   return response.status(200).json(match);
 });
@@ -31,7 +31,7 @@ app.post('/api/v1/ideas', (request, response) => {
   const newIdea = request.body;
 
   for (let requiredParameter of ['id', 'title', 'description']) {
-    if (!newIdea[requiredParameter]) return response.status(422).json({error: `You are missing a required parameter of ${requiredParameter}`});
+    if (!newIdea[requiredParameter]) return response.status(422).json({message: `You are missing a required parameter of ${requiredParameter}`});
   }
 
   app.locals.ideas = [...app.locals.ideas, newIdea];
@@ -43,7 +43,7 @@ app.delete('/api/v1/ideas/:id', (request, response) => {
   const { id } = request.params;
   const match = app.locals.ideas.find(idea => idea.id == id);
 
-  if (!match) return response.status(404).json({error: `No idea found with an id of ${id}`});
+  if (!match) return response.status(404).json({message: `No idea found with an id of ${id}`});
 
   const filteredIdeas = app.locals.ideas.filter(idea => idea.id != id);
 
