@@ -36,7 +36,7 @@ app.post('/api/v1/ideas', (request, response) => {
 
   app.locals.ideas = [...app.locals.ideas, newIdea];
 
-  return response.status(201).json({id: newIdea.id});
+  return response.status(201).json(newIdea);
 });
 
 app.delete('/api/v1/ideas/:id', (request, response) => {

@@ -74,7 +74,7 @@ Sample request:
 Sample response (201):
 
 ```js
-  { id: 98623913021 }
+  { id: 98623913021, title: 'Sweaters for pugs', description: 'To keep them warm' }
 ```
 
 Sample BAD request:
