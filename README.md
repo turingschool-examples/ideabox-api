@@ -99,9 +99,9 @@ Sample BAD response (422):
 
 ### DELETE an idea
 
-URL: `http://localhost:3001/ideas/:id`
+URL: `http://localhost:3001/api/v1/ideas/:id`
 
-Sample URL: `http://localhost:3001/ideas/2`
+Sample URL: `http://localhost:3001/api/v1/ideas/2`
 
 Sample response (204): no content
 
