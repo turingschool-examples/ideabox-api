@@ -4,19 +4,13 @@ To be used with the React III lesson.
 
 ## Set Up
 
-Globally install `nodemon`. This will run your server.
-
-```bash
-$ npm install nodemon -g
-```
-
 Clone down this repo. (Do **NOT** nest it inside your IdeaBox repo!)
 
 CD into this repo.
 
 Run `npm install`.
 
-Run `npm start`.
+Run `node server.js` to start the server.
 
 ## Endpoints
 
@@ -71,10 +65,10 @@ Sample request:
 }
 ```
 
-Sample response (201):
+Sample response (201): This is the idea that was submitted in the POST request
 
 ```js
-  { id: 98623913021, title: 'Sweaters for pugs', description: 'To keep them warm' }
+  { id: 98623913021, title: 'Title', description: 'Description' }
 ```
 
 Sample BAD request:
@@ -103,7 +97,7 @@ URL: `http://localhost:3001/api/v1/ideas/:id`
 
 Sample URL: `http://localhost:3001/api/v1/ideas/2`
 
-Sample response (204): no content
+Sample response (204): no content in the body, nothing to parse
 
 Sample BAD response (404):
 
